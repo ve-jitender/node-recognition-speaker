@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice recorder</title>
+    <style>
+        * {
+            margin: 0p;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        button {
+            padding: 7px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Voice Recording Service</h2>
+    Name : <input id="recorderName" type="text" min="2" max="100" style="height:30px;width:200px"/><br/>
+    <br/>
+    <button id="startRecording">Start</button>
+    <button id="stopRecording">Stop</button>
+    <br>
+    <p id="isRecording">Click start button to record</p>
+    <audio src="" id="audioElement" controls></audio>
+    <br/><br/><br/>
+    <h2>File Upload Service</h2>
+    <!-- <form id='form'>
+    <input type="file" name="files" id="file">
+    <button id="upload"type='submit'>Upload</button>
+    </form> -->
+    <form id="form" method="post" enctype="multipart/form-data">
+        <div>
+          <label for="file">Choose file to upload</label>
+          <input type="file" id="file" name="file" multiple />
+        </div>
+        <br/>
+        <div>
+            <input type="text" id="hidden_operationId" hidden/>
+          <button type='submit' id="submit_page">Submit</button> <button id="compare_button" disabled>Compare</button> <button id="identify_button" disabled>Get Result</button>
+        </div>
+      </form>
+</body>
+
+
+<script src="app.js">
+
+</script>
+
+
+</html>
